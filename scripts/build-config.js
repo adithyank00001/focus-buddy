@@ -3,8 +3,12 @@
 // Build script to populate configuration from .env file
 // This script reads the .env file and updates the setup-config.js file
 
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Read .env file
 function readEnvFile() {
@@ -82,8 +86,8 @@ function main() {
 }
 
 // Run if called directly
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = { readEnvFile, updateConfig };
+export { readEnvFile, updateConfig };
