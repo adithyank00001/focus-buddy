@@ -1,0 +1,222 @@
+/* Focus Partner Chatbot Styles */
+
+#focus-partner-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#focus-partner-header {
+  background: #2563eb;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  user-select: none;
+}
+
+#focus-partner-header:active {
+  cursor: grabbing;
+}
+
+#focus-partner-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#focus-partner-controls {
+  display: flex;
+  gap: 8px;
+}
+
+#focus-partner-controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+#focus-partner-controls button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#focus-partner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#focus-partner-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+.message {
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.message-content {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-content {
+  background: #2563eb;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.bot-message .message-content {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #e2e8f0;
+  border-bottom-left-radius: 4px;
+}
+
+#focus-partner-input {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 8px;
+}
+
+#focus-partner-goal-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#focus-partner-goal-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#focus-partner-submit {
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#focus-partner-submit:hover {
+  background: #1d4ed8;
+}
+
+#focus-partner-submit:active {
+  background: #1e40af;
+}
+
+/* Scrollbar styling */
+#focus-partner-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#focus-partner-messages::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+#focus-partner-messages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+#focus-partner-messages::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Session Control Buttons */
+#focus-partner-session-controls {
+  padding: 16px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+}
+
+.session-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 140px;
+}
+
+.start-button {
+  background: #10b981;
+  color: white;
+}
+
+.start-button:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.start-button:active {
+  background: #047857;
+  transform: translateY(0);
+}
+
+.stop-button {
+  background: #ef4444;
+  color: white;
+}
+
+.stop-button:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.stop-button:active {
+  background: #b91c1c;
+  transform: translateY(0);
+}

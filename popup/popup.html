@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Partner</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="focus-partner-chatbot">
+      <div id="focus-partner-header">
+        <span id="focus-partner-title">Focus Partner</span>
+        <div id="focus-partner-controls">
+          <button id="focus-partner-close" title="Close">×</button>
+        </div>
+      </div>
+
+      <div id="focus-partner-content">
+        <div id="focus-partner-messages">
+          <div class="message bot-message">
+            <div class="message-content">
+              <p>
+                Hi! I'm your Focus Partner. What are you planning to do today?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="focus-partner-actions">
+          <button
+            id="focus-partner-start"
+            class="action-btn start"
+            style="display: none"
+          >
+            Start Focus Session
+          </button>
+          <button
+            id="focus-partner-stop"
+            class="action-btn stop"
+            style="display: none"
+          >
+            Stop Session
+          </button>
+          <button
+            id="focus-partner-test-overlay"
+            class="action-btn test"
+            style="display: inline-block"
+          >
+            Test Overlay Blocker
+          </button>
+        </div>
+
+        <div id="focus-partner-input">
+          <input
+            type="text"
+            id="focus-partner-goal-input"
+            placeholder="Type your goal here..."
+          />
+          <button id="focus-partner-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

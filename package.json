@@ -1,0 +1,21 @@
+{
+  "name": "focus-partner-extension",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI-powered focus assistant Chrome extension",
+  "scripts": {
+    "build-config": "node scripts/build-config.js",
+    "setup": "npm run build-config"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "focus",
+    "productivity"
+  ],
+  "author": "Focus Partner Team",
+  "license": "MIT"
+}

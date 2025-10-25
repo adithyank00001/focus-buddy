@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Partner5",
+  "version": "1.0.0",
+  "description": "AI-powered focus assistant that helps you stay on track with your goals",
+
+  "permissions": ["storage", "activeTab", "scripting"],
+
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "scripts/config.js",
+        "content-script.js",
+        "scripts/pageMonitor.js"
+      ],
+      "css": ["styles/overlay.css"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Focus Partner",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "chatbot/chatbot.html",
+        "chatbot/chatbot.js",
+        "chatbot/chatbot.css",
+        "scripts/ai.js",
+        "scripts/config.js",
+        "scripts/pageMonitor.js",
+        "scripts/storage.js",
+        "styles/overlay.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

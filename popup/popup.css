@@ -1,0 +1,223 @@
+/* Focus Partner Popup Styles - Chatbot Interface */
+
+body {
+  width: 350px;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+  color: #333333;
+  overflow: hidden;
+}
+
+#focus-partner-chatbot {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#focus-partner-header {
+  background: #2563eb;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  user-select: none;
+}
+
+#focus-partner-header:active {
+  cursor: grabbing;
+}
+
+#focus-partner-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#focus-partner-controls {
+  display: flex;
+  gap: 8px;
+}
+
+#focus-partner-controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+#focus-partner-controls button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#focus-partner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#focus-partner-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+.message {
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.message-content {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-content {
+  background: #2563eb;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.bot-message .message-content {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #e2e8f0;
+  border-bottom-left-radius: 4px;
+}
+
+#focus-partner-input {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 8px;
+}
+
+#focus-partner-actions {
+  padding: 12px 16px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.action-btn.start {
+  background: #059669;
+  color: #ffffff;
+}
+
+.action-btn.start:hover {
+  background: #047857;
+}
+
+.action-btn.stop {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.action-btn.stop:hover {
+  background: #dc2626;
+}
+
+.action-btn.test {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.action-btn.test:hover {
+  background: #6d28d9;
+}
+
+#focus-partner-goal-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#focus-partner-goal-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#focus-partner-submit {
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#focus-partner-submit:hover {
+  background: #1d4ed8;
+}
+
+#focus-partner-submit:active {
+  background: #1e40af;
+}
+
+/* Scrollbar styling */
+#focus-partner-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#focus-partner-messages::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+#focus-partner-messages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+#focus-partner-messages::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

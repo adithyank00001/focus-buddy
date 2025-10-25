@@ -1,0 +1,197 @@
+/* Focus Partner Overlay Styles */
+
+/* Off-goal page overlay */
+#focus-partner-off-goal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2147483647; /* ensure topmost */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  pointer-events: auto;
+}
+
+.off-goal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.off-goal-header h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  color: #dc2626;
+}
+
+.off-goal-message {
+  margin-bottom: 24px;
+}
+
+.off-goal-message p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #374151;
+}
+
+.goal-reminder {
+  font-weight: 600;
+  color: #2563eb;
+  font-style: italic;
+}
+
+.off-goal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.off-goal-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#focus-partner-continue {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+#focus-partner-continue:hover {
+  background: #e5e7eb;
+}
+
+#focus-partner-go-back {
+  background: #2563eb;
+  color: white;
+}
+
+#focus-partner-go-back:hover {
+  background: #1d4ed8;
+}
+
+/* Distraction blocking styles */
+.focus-partner-blocked {
+  display: none !important;
+}
+
+/* Focus Partner chatbot overlay positioning */
+#focus-partner-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+/* Test overlay blocker styles */
+#focus-partner-test-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2147483647; /* ensure topmost */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  pointer-events: auto;
+}
+
+.test-overlay-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.test-overlay-header h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  color: #7c3aed;
+}
+
+.test-overlay-message {
+  margin-bottom: 24px;
+}
+
+.test-overlay-message p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #374151;
+}
+
+.test-overlay-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.test-overlay-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#focus-partner-test-close {
+  background: #7c3aed;
+  color: white;
+}
+
+#focus-partner-test-close:hover {
+  background: #6d28d9;
+}
+
+/* Ensure chatbot is above other elements */
+#focus-partner-chatbot {
+  z-index: 10001;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .off-goal-content {
+    margin: 20px;
+    padding: 24px;
+  }
+
+  .off-goal-actions {
+    flex-direction: column;
+  }
+
+  .off-goal-actions button {
+    width: 100%;
+  }
+
+  #focus-partner-chatbot {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  #focus-partner-chatbot {
+    width: calc(100vw - 40px);
+    height: 350px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+  }
+}
